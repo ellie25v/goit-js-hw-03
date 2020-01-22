@@ -8,17 +8,18 @@
 //         // arrProp = arr[i][`${prop}`];
 //     }
 // };
-//### Second way
+
+// Second way
 // const getAllPropValues = function(arr, prop) {
-//     const values = [];
+//     const newArr = [];
 //     for (const item of arr) {
 //         let value = item[prop];
 
 //         if (value != undefined) {
-//             values.push(value);
+//             newArr.push(value);
 //         }
 //     }
-//     return values;
+//     return newArr;
 // }
 
 
