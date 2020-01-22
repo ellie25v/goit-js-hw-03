@@ -9,7 +9,8 @@
 //     }
 // };
 
-// Second way
+
+// Second try
 // const getAllPropValues = function(arr, prop) {
 //     const newArr = [];
 //     for (const item of arr) {

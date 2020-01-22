@@ -10,11 +10,11 @@ const products = [
 const calculateTotalPrice = function(allProdcuts, productName) {
     let total = 0;
 
-    for (const item of allProdcuts) {
-        let name = item.name;
+    for (let i = 0; i < allProdcuts.length; i++) {
+        let name = allProdcuts[i].name;
 
         if (productName === name) {
-            total = item.price * item.quantity;
+            total = allProdcuts[i].price * allProdcuts[i].quantity;
         }
     }
 
