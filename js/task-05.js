@@ -1,29 +1,20 @@
 'use strict';
-// My thoughts
-// const getAllPropValues = function(arr, prop) {
-//     for (let i = 0; i < arr.length; i += 1){
 
-//         const { name, price, quantity} = arr[i];
-//         console.log(`${prop}`);
-//         // arrProp = arr[i][`${prop}`];
-//     }
+// const getAllPropValues = function(arr, prop) {
+//     return arr.map(el => el[prop]);
 // };
 
+const getAllPropValues = function(arr, prop) {
+    const newArr = [];
+    for (const item of arr) {
+        let value = item[prop];
 
-// Second try
-// const getAllPropValues = function(arr, prop) {
-//     const newArr = [];
-//     for (const item of arr) {
-//         let value = item[prop];
-
-//         if (value != undefined) {
-//             newArr.push(value);
-//         }
-//     }
-//     return newArr;
-// }
-
-
+        if (value !== undefined) {
+            newArr.push(value);
+        }
+    }
+    return newArr;
+}
 
 
 const products = [
@@ -32,11 +23,6 @@ const products = [
   { name: 'Дроид', price: 400, quantity: 7 },
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
-
-
-const getAllPropValues = function(arr, prop) {
-    return arr.map(el => el[prop]);
-};
 
 
 console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
